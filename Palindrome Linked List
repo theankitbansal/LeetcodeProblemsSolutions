@@ -1,0 +1,24 @@
+ bool isPalindrome(ListNode* head) {
+        ListNode *temp=head;
+        long int len=0;
+        long int arr[1000000];
+        while(temp!=NULL && temp->next!=NULL){
+            len++;
+            temp=temp->next;
+        }
+        temp=head;
+        for(int i=0; i<=len; i++){
+            arr[i]=temp->val;
+            temp=temp->next;
+        }
+        long int s=0, e=len;
+        while(s<e){
+            if(arr[s]!=arr[e])
+                return false;
+            else{
+                s++;
+                e--;
+            }
+        }
+        return true;
+    }
