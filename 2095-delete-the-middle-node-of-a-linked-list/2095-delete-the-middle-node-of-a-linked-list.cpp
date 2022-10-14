@@ -14,8 +14,6 @@ public:
         if(head==NULL || head->next==NULL){
             return NULL;
         }
-        
-        
         ListNode *p, *q, *r;
         p=q=head;
         r=NULL;
