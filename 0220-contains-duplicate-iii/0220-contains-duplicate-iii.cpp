@@ -1,8 +1,7 @@
 class Solution {
 public:
     bool containsNearbyAlmostDuplicate(vector<int>& nums, int indexDiff, int valueDiff) {
-     //   unordered_map<int, int>m;
-        vector<pair<long, long>>v(nums.size());
+        vector<pair<int, int>>v(nums.size());
         for(int i=0; i<nums.size(); i++){
             v[i].first=nums[i];
             v[i].second=i;
