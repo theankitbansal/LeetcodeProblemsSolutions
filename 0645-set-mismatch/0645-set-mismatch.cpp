@@ -13,9 +13,10 @@ public:
             if(arr[i]>1){
                 v.push_back(i);
             }
+           
         }
         
-        for(int i=1;i<n+1; i++){
+      for(int i=1;i<n+1; i++){
             if(arr[i]==0){
                 v.push_back(i);
             }
