@@ -6,10 +6,18 @@ public:
         
         if(!n) return 0;
         
-        for(int i=0; i<n; i++){
-            if(citations[i]>=n-i)
-                return n-i;
+        int low=0;
+        int high=n-1;
+        int ans=0;
+        while(low<=high){
+            int mid=(low+high)/2;
+            if(citations[mid]>=n-mid){
+                ans=n-mid;
+                high=mid-1;
+            }else{
+                low=mid+1;
+            }
         }
-        return 0;
+        return ans;
     }
 };
